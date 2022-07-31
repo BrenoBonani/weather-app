@@ -1,0 +1,113 @@
+
+html, body {
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 2% 0 0 0;
+    background-image: -webkit-linear-gradient(60deg, #A0BEF8 20%, #B5F0F0 10%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+}
+
+.main {
+    overflow: auto;
+    min-height: 100%;
+}
+
+.heading {
+    margin-bottom: 3.5%;
+}
+
+
+.form-control {
+   margin: auto!important;
+   width: 30%!important;
+   
+}
+
+.btn {
+    margin-top: 5%;
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.footer p {
+	margin-top: 210px;
+	font-size: 1rem;
+    
+}
+
+/* Cloud and Sun CSS */
+
+.sunnySky {
+    position: relative;
+    left: 130%;
+    bottom: 60%;
+}
+
+
+.cloudSkyOne {
+    position: absolute;
+    right: 16%;
+    top: 35%;
+}
+
+.cloudSkyTwo {
+    position: absolute;
+    right: 72%;
+   
+}
+
+
+
+@media (max-width: 1040px) {
+    
+    html, body {
+       
+        padding: 10% 0 0 0;
+    
+    }
+
+    .sunnySky {
+        width: 40%;
+        left: -50%;
+        bottom: 60%;
+    }
+    
+    
+    .cloudSkyOne {
+       width: 20%;
+       right: 7%;
+       top: 30%;
+    }
+    
+    .cloudSkyTwo {
+        width: 20%;
+        right: 75%;
+    }
+
+}
