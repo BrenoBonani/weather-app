@@ -31,12 +31,11 @@ app.post("/", function(req, res){
             const icon = weatherData.weather[0].icon;
             const imgURL = process.env.IMG_URL + icon + "@2x.png";
             
-            console.log(weatherData);
 
-            res.write("<h1>The temperature in " + query + " is " +  temp + " Degrees Celcius.</h1>");
-            res.write("<h3>The weather is currently " + weatherDiscription + " and the thermal sensation is " + feelsLike + " Degrees Celcius</h3>");
-            res.write("<img src=" + imgURL + "></img>");
-            res.send();
+            // res.write("<h1>The temperature in " + query + " is " +  temp + " Degrees Celcius.</h1>");
+            // res.write("<h3>The weather is currently " + weatherDiscription + " and the thermal sensation is " + feelsLike + " Degrees Celcius</h3>");
+            // res.write("<img src=" + imgURL + "></img>");
+            res.render("post", {query: query, temp: temp, weatherDiscription: weatherDiscription, feelsLike: feelsLike, imgURL: imgURL});
             }
 
             run().catch(e => res.render("failure"));

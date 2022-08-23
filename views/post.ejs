@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    
+
+    <h1> 
+        The temperature in <%= query %> is <%= temp %> Degrees Celcius.
+    </h1>
+    <h3>
+        The weather is currently <%= weatherDiscription %> and the thermal sensation is <%= feelsLike %> Degrees Celcius.
+    </h3>
+    <img src="<%= imgURL %>" alt=""> 
+
+    <div>
+        <form action="/">
+            <button class="btn"> Search again </button>
+        </form>
+    </div>
+</body>
+</html>
