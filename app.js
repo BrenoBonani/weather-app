@@ -24,7 +24,9 @@ app.post("/", function(req, res){
 
 
         response.on("data", function(data){
-            const weatherData = JSON.parse(data)
+
+            async function run(){
+            const weatherData = await JSON.parse(data)
             
             const temp = weatherData.main.temp;
             const weatherDiscription = weatherData.weather[0].description;
@@ -39,7 +41,11 @@ app.post("/", function(req, res){
             res.write("<h3>The weather is currently " + weatherDiscription + " and the thermal sensation is " + feelsLike + " Degrees Celcius</h3>");
             res.write("<img src=" + imgURL + "></img>");
             res.send();
+            }
+
+            run().catch(e => res.sendFile(__dirname + "/failure.html"));
         });
+        
     });
 
 });
