@@ -1,4 +1,4 @@
-# weather-app
+# Weather-App
 
 This is my weather-app made with Nodejs, EJS and OpenWeather API.
 
